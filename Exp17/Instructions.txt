@@ -1,0 +1,55 @@
+Part A: Port Mapping
+Step 1: Run container without port mapping
+cmd:
+
+docker run -d nginx
+docker ps
+
+Step 2: Run container with port mapping
+cmd:
+docker run -d -p 8080:80 nginx
+docker ps
+
+Step 3: Verify
+Open browser:
+http://localhost:8080
+
+Part B: Docker Volume (Persistence)
+Step 1: Create volume
+cmd:
+docker volume create myvolume
+docker volume ls
+
+Step 2: Run container with volume
+cmd: docker run -it -v myvolume:/data ubuntu bash
+
+Step 3: Create file inside container
+cmd:
+cd /data
+echo "Docker Volume Persistence Test" > test.txt
+cat test.txt
+exit
+
+Step 4: Verify persistence
+docker run -it -v myvolume:/data ubuntu bash
+cat /data/test.txt
+exit
+
+Part C: Port Mapping + Volume
+Step 1: Run nginx with volume
+cmd:
+docker run -d -p 8081:80 -v myvolume:/usr/share/nginx/html nginx
+
+Step 2: Add HTML file to volume
+docker run -it -v myvolume:/data ubuntu bash
+echo "<h1>Persistent Web Page</h1>" > /data/index.html
+exit
+
+Step 3: Verify
+Open browser:
+http://localhost:8081
+
+Verification Commands
+docker ps
+docker volume ls
+docker volume inspect myvolume
