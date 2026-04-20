@@ -1,0 +1,66 @@
+###Experiment 2: Working with Git Branches 
+
+Step 1: Create Project Directory 
+• mkdir git-conflict  
+• cd git-conflict  
+
+Step 2: Initialize Git Repository 
+• git init 
+
+Step 3: Create File in Main Branch 
+• echo "1st line from main branch" > file.txt 
+• Creates a file with initial content in the main branch 
+
+Step 4: Add and Commit in Main Branch 
+• git add . 
+• git commit -m "1st line added" 
+• Stages and commits the file to the main branch. 
+
+Step 5: Create Feature Branch 
+• git branch feature-branch → Creates a new feature branch. 
+
+Step 6: Switch to Feature Branch 
+• git checkout feature-branch → Moves to the feature branch. 
+
+Step 7: Modify File in Feature Branch 
+• echo "2nd line from feature-branch" >> file.txt 
+• Adds new content in the feature branch. 
+
+Step 8: Commit Feature Branch Changes 
+• git add . 
+• git commit -m "2nd line from branch" 
+• Commits the changes in the feature branch. 
+
+Step 9: Switch Back to Main Branch 
+• git checkout main → Returns to the main branch 
+
+Step 10: Modify Same File in Main Branch 
+• echo "2nd line from main branch" >> file.txt 
+• Creates conflicting changes in the same file. 
+
+Step 11: Commit Main Branch Changes 
+• git add . 
+• git commit -m "2nd line from main" 
+• Commits changes in the main branch. 
+
+Step 12: Merge Feature Branch into Main 
+• git merge feature-branch 
+• Attempts to merge feature branch into main, resulting in a merge conflict. 
+
+Step 13: Resolve Merge Conflict 
+• git mergetool → Opens the merge resolution tool (TortoiseMerge) 
+• Using TortoiseMerge: 
+o Choose required blocks from Mine or Theirs (Turn Red → Yellow) 
+o Save the merged file 
+o Conflict is resolved in file.txt 
+
+Step 14: Check Repository Status 
+• git status → Shows file.txt.orig as untracked after conflict resolution. 
+
+Step 15: Commit Merge Resolution 
+• git add . 
+• git commit -m "Merge conflict resolved" 
+• Completes the merge by committing resolved changes. 
+
+Step 16: Verify Commit History 
+• git log –oneline → Displays commit history showing branch merge. 
