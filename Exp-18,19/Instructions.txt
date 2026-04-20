@@ -1,0 +1,45 @@
+###Experiment 18: Docker Image Push to Docker Hub
+
+mkdir docker-push
+cd docker-push
+        - Dockerfile
+        - Grade.java
+
+#Dockerfile
+FROM eclipse-temurin:17-jdk
+WORKDIR /app
+COPY . /app
+RUN javac Grade.java
+CMD ["java", "Grade"]
+
+#Grade.java
+import java.util.Scanner;
+public class Grade{
+    static char func(double avg){
+        if(avg>=90) return 'A';
+        else if(avg>=80) return 'B';
+        else if(avg>=70) return 'C';
+        else if(avg>=60) return 'D';
+        else if(avg>=50) return 'E';
+        else return 'F';
+    }
+    public static void main(String[] args){
+        Scanner scan=new Scanner(System.in);
+        System.out.print("Enter marks: ");
+        double marks=scan.nextDouble();
+        System.out.print("Grade: "+func(marks));
+    }
+}
+
+docker build -t java-app .
+docker run -it java-app
+docker tag java-app username/java-app:v1
+docker push username/java-app:v1
+-----------------------------------------------------------------------
+###Experiment 19: Jenkins and Docker Integration 
+
+18th exp. files pushed to GitHub repo - Jenkins - Docker
+
+Execute Batch Command (Build-Step)
+docker build -t java-app .
+docker run -d -t java-app
