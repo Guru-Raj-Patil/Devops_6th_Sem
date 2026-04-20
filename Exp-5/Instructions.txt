@@ -1,0 +1,16 @@
+###Experiment 5: Git Tagging and Release Creation 
+
+* GitHub repo - git-tag
+* git clone <repo-url>.git
+* cd git-tag
+* create README.md on GitHub 
+* git pull ---> ls / dir
+* git tag v1.0 ---> git tag
+* git tag -a v1.2 -m "Annotated tag created" ---> git tag
+* git show v1.0
+* git tag -l "v1.*"
+* git push origin v1.0 
+* git tag v2.0 ---> git tag
+* git push --tags
+* git tag -d v1.0 ---> git tag
+* git push origin -d v1.0
