@@ -1,1 +1,14 @@
 ###Experiment 3: GitHub Repository Creation and Push 
+
+* git config --global user.name "UserName"
+* git config --global user.name "UserEmail"
+* GitHub repo --> clone ---> cd repo dir
+* Create file locally - main.py
+* git add main.py 
+* git commit -m "Add main.py file"
+* git push origin main
+* Create README file remotely 
+* git pull origin main 
+OR 
+* git fetch origin
+* git merge origin 
