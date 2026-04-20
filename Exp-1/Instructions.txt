@@ -1,0 +1,37 @@
+###Experiment 1: Introduction to Git and Local Repository Management
+
+Step 1: Create Project Directory 
+• mkdir git-demo 
+• cd git-demo 
+• Creates and moves into a new folder for the experiment. 
+
+Step 2: Initialize Git Repository 
+• git init → Initializes a new local Git repository and creates the hidden .git folder. 
+
+Step 3: List Files Including Hidden Files 
+• ls -a → Displays all files, including the .git directory. 
+
+Step 4: Configure Git User Details 
+• git config --global user.name "UserName" 
+• git config --global user.email "UserEmail" 
+
+Step 5: Create a File 
+• echo "1st git experiment" > README.txt  
+
+Step 6: Check File Status 
+• git status 
+
+Step 7: Add File to Staging Area 
+• git add README.txt → Moves the file to the staging area. 
+
+Step 8: Commit the File 
+• git commit -m "Initial Commit" 
+
+Step 9: Modify the File 
+• echo "Git tracks file changes" >> README.txt → Appends new content to the file. 
+
+Step 10: Add and Commit Changes 
+• git add README.txt 
+• git commit -m "Updated README file" 
+Step 11: View Commit History 
+• git log → Displays the complete commit history of the repository.
