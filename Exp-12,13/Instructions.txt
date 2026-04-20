@@ -1,1 +1,17 @@
+###Experiment 12: Running JUnit Tests with Maven/Gradle 
 
+* mvn --version
+* mvn archetype:generate
+* Project details (groupId, artifactId, version, package)
+* cd sample-app --> mvn package
+* Calculator.java and CalculatorTest.java
+* mvn clean test --> BUILD SUCCESS
+
+---------------------------------------------------------------------------
+
+###Experiment 13: Integrating JUnit with Jenkins 
+
+* 12th cont. --> Jenkins - Maven Project item type
+* Connect to GitHub repo -- Poll SCM trigger
+* Build - goals and options - package
+* Post Build - Archive the artifacts - target/*.jar
