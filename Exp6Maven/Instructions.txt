@@ -1,0 +1,42 @@
+**Experiment 6: Creation and Build of a Java Project Using Apache Maven**
+
+* mvn –version 
+
+* mvn archetype:generate
+
+* Project details:
+- groupId = com.bnmit
+- artifactId = sample-app
+- version = 1.0-SNAPSHOT
+- package = com.bnmit
+
+* cd sample-app 
+* mvn package
+
+* App.Java --> BankService.java
+
+* mvn clean
+* mvn package
+
+* mvn site
+
+* cd target
+* java -cp sample-app-1.0-SNAPSHOT.jar com.bnmit.BankService 
+
+--------------------------------------------------------------------------------
+
+**Experiment 7: Jenkins Freestyle Job**
+
+* Execute Windows Batch Command
+- javac BankService.java
+- java BankService
+
+--------------------------------------------------------------------------------
+
+**Experiment 8: Jenkins Build Triggers**
+
+* SCM Polling - schedule
+
+* Execute Windows Batch Command
+- javac BankService.java
+- java BankService
