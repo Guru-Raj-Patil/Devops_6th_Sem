@@ -1,0 +1,10 @@
+**Experiment 9: Jenkins Declarative Pipeline**
+
+- Pipeline script - groovy sandbox enabled 
+- bat "exit 1" --> to show failure 
+
+**Experiment 10: Jenkins Pipeline Visualization and Logs**
+
+- Pipeline script - groovy sandbox enabled 
+- bat "exit 1" --> to show failure 
+- Stage View plugin - visualization 
