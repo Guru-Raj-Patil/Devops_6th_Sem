@@ -1,0 +1,26 @@
+###Experiment 14: Test Coverage using JaCoCo
+
+* 12th cont. 
+* jacoco plugin added in pom.xml
+ <plugin> 
+        <groupId>org.jacoco</groupId> 
+        <artifactId>jacoco-maven-plugin</artifactId> 
+        <version>0.8.11</version> 
+        <executions> 
+          <execution> 
+            <goals> 
+              <goal>prepare-agent</goal> 
+            </goals> 
+          </execution> 
+          <execution> 
+            <id>report</id> 
+            <phase>test</phase> 
+            <goals> 
+              <goal>report</goal> 
+            </goals> 
+          </execution> 
+        </executions> 
+      </plugin>
+
+* mvn clean test --> 100% coverage 
+* remove test methods in Test.java --> coverage % reduces 
