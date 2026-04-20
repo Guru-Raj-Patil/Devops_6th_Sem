@@ -1,0 +1,10 @@
+Step 1: Create a new Java Project in Eclipse named CalculatorProject. 
+Step 2: Inside src, create a package named calculatorexample. 
+Step 3: Create a Java class Calculator.java inside the package. 
+Step 4: Implement basic arithmetic methods (add, subtract, multiply, divide) 
+Step 5: Right-click project → Build Path → Add Libraries → JUnit (choose JUnit 5). 
+Step 6: Right-click src → New → JUnit Test Case → name it CalculatorTest. 
+Step 7: Import JUnit assertions in the test class. 
+Step 8: Write test methods for each arithmetic operation. 
+Step 9: Use assertEquals() to compare expected and actual results. 
+Step 10: Right-click test file → Run As → JUnit Test to execute tests.
