@@ -1,1 +1,21 @@
 ###Experiment 4: GitHub Collaboration Using Pull Requests 
+
+* GitHub repo - git-pull-requests
+* git clone <repo-url>.git
+* cd git-pull-requests
+* echo "File created locally" > file.txt --> File on main branch
+* git add file.txt
+* git commit -m "Initial commit on main" 
+* git push origin main
+* git branch new-feature
+* git checkout new-feature
+* echo "Updation on feature branch" >> file.txt --> File on feature branch
+* echo "New branch file" > feature.txt
+* git add .
+* git commit -m "Changes made in feature branch" 
+* PR and Merge (GitHub GUI)
+* git checkout main
+* git pull origin main
+* git log --oneline
+* git branch -d new-feature
+* git push origin -d new-feature
