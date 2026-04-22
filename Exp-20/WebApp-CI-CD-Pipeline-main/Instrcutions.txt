@@ -1,1 +1,2 @@
-docker build -t java-app .
+docker build -t sample-app .
+docker run -d -p 8091:8080 sample-app
